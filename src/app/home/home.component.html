@@ -1,0 +1,33 @@
+<section>
+  <div class="container">
+    <h1 class="products-title">{{ 'produtcs_title' | translate }}</h1>
+    <div class="slider">
+      <owl-carousel-o #owlCarousel [options]="customOptions">
+        <ng-template carouselSlide *ngFor="let product of products">
+          <div class="card">
+            <div class="card-content" [ngStyle]="{'background-color': isDarkTheme ? '#5eda5e' : '#3b5b2d'}">
+              <img class="product-image" [src]="product.imgSrc">
+              <h2 class="product-title" [ngStyle]="{'color': isDarkTheme ? '#000000' : '#ffffff'}">{{ product.name | translate}}</h2>
+              <p class="product-description" [ngStyle]="{'color': isDarkTheme ? '#000000' : '#ffffff'}">{{ product.description | translate}}</p>
+              <p class="product-price" [ngStyle]="{'color': isDarkTheme ? '#000000' : '#ffffff'}">{{ product.price | currency:'USD':'symbol':'1.2-2' }}</p>
+              <!-- Display product variants if available -->
+              <div *ngIf="product.variants && product.variants.length > 0" class="variants-container">
+                <div class="variants-scroll-container">
+                  <ul class="variants-images">
+                    <li class="list-element" *ngFor="let variant of product.variants">
+                      <img class="variant-image" [src]="variant.images" [alt]="variant.name">
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="button-product">
+                <button class="buy-now" [ngStyle]="{'background-color': isDarkTheme ? '#3b5b2d' : '#5eda5e', 'color': isDarkTheme ? '#ffffff' : '#000000'}">{{ 'buy_now' | translate }}</button>
+              </div>                                   
+            </div>
+          </div>
+        </ng-template>
+      </owl-carousel-o>
+    </div>
+  </div>
+  <app-testimonial></app-testimonial>
+</section>

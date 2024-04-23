@@ -1,0 +1,21 @@
+<section>
+    <div class="testimonials">
+        <h1 class="testimonials-title">{{'testimonials_title' | translate}}</h1>
+        <!-- tıklamalı yıldız
+        <app-star-rating [initialRating]="rating" (rated)="onRated($event)"></app-star-rating>
+        -->
+        <div class="slider-testimonial">
+            <owl-carousel-o #owlCarousel [options]="customOptions2">
+                <ng-template carouselSlide *ngFor="let testimonial of testimonials">
+                <div class="testimonial">
+                  <div class="testimonial-content" [ngStyle]="{'background-color': isDarkTheme ? '#5eda5e' : '#3b5b2d'}">
+                   <img class="username-image">
+                   <h5 class="username">{{ testimonial.username }}</h5>
+                   <p>{{testimonial.description | translate}}</p>
+                  </div>
+                </div>
+              </ng-template>
+            </owl-carousel-o>
+          </div>
+        </div>
+</section>

@@ -1,0 +1,15 @@
+<section class="sign-in-container">
+    <h1 class="sign-in-title">Welcome to our Goodfellas family.</h1>
+    <div class="register-content">
+      <img class="main-page-image" src="assets/img/welcome.png">
+      <form [formGroup]="registerForm" (ngSubmit)="signup()" class="register-form">
+        <input formControlName="username" type="text" placeholder="Username" required>
+        <input formControlName="email" type="email" placeholder="E-mail" required>
+        <input formControlName="password" type="password" placeholder="Password" required>
+        <input formControlName="address" type="text" placeholder="Address" required>
+        <input formControlName="phoneNumber" type="tel" pattern="^[0-9]*$" required>
+        <button type="submit" class="submit-button">Submit</button>
+      </form>
+    </div>
+  </section>
+  

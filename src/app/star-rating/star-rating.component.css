@@ -1,0 +1,11 @@
+.filled {
+    color: gold;
+}
+
+.empty {
+    color: #ccc;
+}
+
+span {
+    cursor: pointer;
+}

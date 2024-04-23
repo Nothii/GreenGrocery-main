@@ -1,0 +1,75 @@
+<footer class="footer" [ngClass]="{'dark-theme-mode':isDarkTheme}">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Address</h4>
+                <ul>
+                    <li>
+                        <address>
+                            {{ 'location' | translate }}
+                        </address>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>{{ 'about-us' | translate }}</h4>
+                <ul>
+                    <li>
+                        <a [routerLink]="'/who-are-we'">Who Are We?</a>
+                    </li>
+                    <li>
+                        <a>Our History</a>
+                    </li>
+                    <li>
+                        <a>Testimonials</a>
+                    </li>
+                    <li>
+                        <a>Privacy Policy</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Get Help</h4>
+                <ul>
+                    <li>
+                        <a>Shipping</a>
+                    </li>
+                    <li>
+                        <a>Product Safety</a>
+                    </li>
+                    <li>
+                        <a>Ordering Policy</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>FAQ</h4>
+                <ul>
+                    <li>
+                        <a>Refund Policy</a>
+                    </li>
+                    <li>
+                        <a>Return Policy</a>
+                    </li>
+                    <li>
+                        <a>Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a>Quality Questioning</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li>
+                        <p>Phone Number: </p>
+                    </li>
+                    <li>
+                        <a>Email: </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
